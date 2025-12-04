@@ -17,7 +17,7 @@ const NODE_ENV = process.env.NODE_ENV || "development";
 
 // 1. CORS 설정 (특정 도메인만 허용)
 const corsOptions = {
-  origin: (process.env.CORS_ORIGIN || "http://localhost:3000").split(","),
+  origin: process.env.CORS_ORIGIN.split(","),
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],

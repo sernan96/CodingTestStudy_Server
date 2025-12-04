@@ -7,19 +7,19 @@ require("dotenv").config();
 const config = {
   // 서버 설정
   server: {
-    nodeEnv: process.env.NODE_ENV || "development",
-    port: parseInt(process.env.PORT || "5000", 10),
-    isDevelopment: process.env.NODE_ENV === "development",
-    isProduction: process.env.NODE_ENV === "production",
+    nodeEnv: process.env.NODE_ENV,
+    port: parseInt(process.env.PORT, 10),
+    isDevelopment: process.env.NODE_ENV,
+    isProduction: process.env.NODE_ENV,
   },
 
   // 데이터베이스 설정
   database: {
-    host: process.env.DB_HOST || "localhost",
-    user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "",
-    name: process.env.DB_NAME || "study_platform",
-    port: parseInt(process.env.DB_PORT || "3306", 10),
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    name: process.env.DB_NAME,
+    port: parseInt(process.env.DB_PORT, 10),
     useMySQL: process.env.USE_MYSQL === "true",
   },
 
@@ -31,7 +31,7 @@ const config = {
 
   // CORS 설정
   cors: {
-    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+    origin: process.env.CORS_ORIGIN,
   },
 
   // API 설정
