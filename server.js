@@ -22,7 +22,7 @@ app.use(
     credentials: true,
   })
 );
-
+app.options("*", cors());
 // 미들웨어
 app.use(cors());
 app.use(express.json());
