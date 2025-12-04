@@ -24,7 +24,6 @@ app.use(
 );
 app.options("*", cors());
 // 미들웨어
-app.use(cors());
 app.use(express.json());
 
 // 정기적 블랙리스트 정리 로직 로드
