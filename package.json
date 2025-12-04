@@ -1,0 +1,28 @@
+{
+  "name": "study-group-backend",
+  "version": "1.0.0",
+  "description": "Coding test study group API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "init-db": "node init-db.js",
+    "cleanup:revoked": "node cleanup-revoked-tokens.js",
+    "setup:env": "copy .env.example .env && echo ✅ .env 파일이 생성되었습니다. 값을 수정해주세요."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
